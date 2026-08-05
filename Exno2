@@ -4,15 +4,15 @@ class Node:
         self.next = None
 
 # Creating nodes
-n1 = Node("katru visum thesai ellam")
-n2 = Node("kandangi kandangi katti vandha ponnu")
-n3 = Node("kadhalikathae manamae kadhalikadhae")
-n4 = Node("nadhilil meengal neendhudhamma")
-n5 = Node("erumaiku kuda blue cross irruku")
-n6 = Node("yaru enna sonnalum yaru enna senjalum")
-n7 = Node("chittapu chikkinu chikkinu vararae")
-n8 = Node("En ennai pirindhai uyraie oh!oh!")
-n9 = Node("uppu karuvadu ura vacha soru")
+n1 = Node("sathikadi pothikadi")
+n2 = Node("Thanjavur jilla")
+n3 = Node("En uchi mandaila")
+n4 = Node("Chillax")
+n5 = Node("olli belli")
+n6 = Node("Coca cola Brownu")
+n7 = Node("Dole Dole")
+n8 = Node("Vaada mapila")
+n9 = Node("Kattu kattu")
 
 # Linking nodes
 n1.next = n2
