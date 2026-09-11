@@ -1,0 +1,64 @@
+class Node:
+    def __init__(self,title):
+        self.title=title
+        self.left=None
+        self.right=None
+class BinarySearchTree:
+    def __init__(self):
+        self.root=None
+    def insert(self,root,title):
+        if root is None:
+            return Node(title)
+        if title < root.title:
+            root.left = self.insert(root.left,title)
+        elif title > root.title:
+            root.right = self.insert(root.right,title)
+        return root
+    def inorder(self, root):
+        if root is not None:
+            self.inorder(root.left)
+            print(root.title)
+            self.inorder(root.right)
+
+    def delete(self,root,title):
+        if root is None:
+            return root
+        if data < root.data:
+            root.left = self.delete(root,left,title)
+        elif data > root.data:
+            root.right = self.delete(root,right,title)
+        else:
+            if root.left is None:
+                return root.right
+            if root.right is None:
+                return root.left
+            successor = self.find_min(root.right)
+            root.data = successor.data
+            root.right = self.delete(root.right, successor.data)
+        return root
+bst = BinarySearchTree()
+while True:
+    print("OPERATION BINARY TREE")
+    print("1.Insert Book")
+    print("2.Delete Book")
+    print("3.Display Book")
+    print("4.Exit")
+    choice = int(input("Enter Your choice:"))
+    if choice == 1:
+        value= (input("Enter Book Title:"))
+        bst.root = bst.insert(bst.root,value)
+        print("Operation success")
+    elif choice == 2:
+        value= (input("Enter Book Title:"))
+        bst.root = bst.delete(bst.root,value)
+        print("Operation success")
+    elif choice == 3:
+        print("Tree Title:")
+        bst.inorder(bst.root)
+        print()
+
+    elif choice == 4:
+        print("Program terminated")
+        break
+    else:
+        print("Invalid choice")
